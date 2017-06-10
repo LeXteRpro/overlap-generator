@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Overlap Generator</title>
+
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+
+  <!-- Text Overlap Generator -->
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav navbar-right">
+              <li><a href="#">Home</a></li>
+              <li><a href="#">Overlap Generator</a></li>
+              <li><a href="#">How to Use</a></li>
+              <li><a href="#">Contact</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+
+  <div class="row">
+    <div class="col-xs-6 col-xs-offset-3 col-sm-4 col-sm-offset-5 col-md-4 col-md-offset-5">
+      <h1>Overlap Generator</h1>
+
+    </div>
+    <div class="col-md-4"></div>
+  </div> <!-- Close Row -->
+
+
+
+  <div class="row">
+    <div class="col-xs-12 col-xs-offset-1 col-sm-12 col-sm-offset- col-md-11">
+
+      <form action="">
+
+      <section>
+        <h4><strong>Your Text</strong></h4>
+        <input type="text" id="overlapInput" placeholder = "Your message here" value="">
+
+      <div><h5>Number of Pixels:</h5><p id="pixelNum"></p></div>
+
+      </section>
+
+      <h4><strong>Select your overlap method:</strong></h4>
+
+      <section class="button-wrapper">
+        <button type="button" id="x2textOverlapButton" class="overlapButtons" onclick="x2textOverlapFunction()">x2 Text Overlap</button>
+        <button type="button" id="x2unitOverlapButton" class="overlapButtons" onclick="x2unitOverlapFunction()">x2 Unit Overlap</button>
+        <button type="button" id="x2briefingOverlapButton" class="overlapButtons" onclick="x2missionBriefingOverlapFunction()">x2 Briefing Overlap</button>
+        <button type="button" id="x3textOverlapButton" class="overlapButtons" onclick="x3textOverlapFunction()">x3 Text Overlap</button>
+        <button type="button" id="x3unitOverlapButton" class="overlapButtons" onclick="x3unitOverlapFunction()">x3 Unit Overlap</button>
+        <button type="button" id="x3briefingOverlapButton" class="overlapButtons" onclick="x3missionBriefingOverlapFunction()">x3 Briefing Overlap</button>
+      </section> <!-- Close Button Wrapper -->
+
+      <section class="textarea-wrapper">
+        <textarea name="" id="overlapResults" cols="150" rows="10" readonly></textarea>
+      </section>
+      </form>
+      <button class="btn" data-clipboard-action="copy" data-clipboard-target="#overlapResults">Copy to Clipboard</button>
+      <!-- End Text Overlap Generator -->
+
+      </form>
+
+
+    </div>
+    <div class="col-md-4"></div>
+  </div> <!-- Close Row -->
+
+
+
+
+
+<!-- Add Stylesheet -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="scripts/jquery-3.2.1.min.js"></script>
+<script src="scripts/clipboard.min.js"></script>
+<script src="scripts/app.js"></script>
+
+
+</body>
+</html>
