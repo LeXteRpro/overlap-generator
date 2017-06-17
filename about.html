@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Overlap Generator</title>
+
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body class="bg">
+
+  <!-- Text Overlap Generator -->
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav navbar-right">
+              <li><a href="index.html">Overlap Generator</a></li>
+              <li><a href="about.html">Notes</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+
+
+    <div class="row content-wrapper">
+      <div class="col-md-8 col-md-offset-4">
+        <h1>Overlap Generator Notes</h1>
+      </div>
+
+    <div class="row">
+      <div class='col-xs-4 col-xs-offset-1 col-sm-4 col-sm-offset-1 col-md-4 col-md-offset-1'>
+
+          <div>
+            <h3><strong>Notes</strong></h3>
+          </div>
+
+            <div class="generator-notes">
+              <p>This is a Trial version for those who need a solution now. There is a full version under development that will have the full list of feature.
+              Here are some limitations with the current version:</p>
+
+                <ul>
+                  <li>x2 Text Overlap pixel limit will vary from around 215 to 250px depending on the characters used. Be aware. This will be fixed in the future.</li>
+                  <li>X2 Unit Overlap max pixel limit is 75.</li>
+                  <li>X2 Briefing Text max is 129 pixels. However, depending on the characters the limit could be lower or higher. Again, be wary until we improve the formula.</li>
+                  <li>Do not enter color codes (ex: <04>) into the input. Add your custom colors after the text is generated. </li>
+                  <li>Tested with Scmdraft 2 0.8.0</li>
+                  <li>Use the string editor</li>
+
+
+                </ul>
+
+
+            <h4>Overlap Methods to be implemented:</h4>
+
+            <ul>
+              <li>Display Text x2</li>
+              <li>Display Text x3</li>
+              <li>Unit Text x2</li>
+              <li>Unit Text x3</li>
+              <li>Briefing Text x2</li>
+              <li>Briefing Text x3</li>
+              <li>Briefing Objectives x2</li>
+              <li>Briefing Objectives x3</li>
+              <li>In-Game Objectives x2</li>
+              <li>In-Game Objectives x3</li>
+            </ul>
+
+              <p>This is experimentation. Feedback will help better our future design.</p>
+              <p>- Last tested for: 1.18.8.1891</p>
+
+              <p>Program By: LeX</p>
+              <p>Overlap algorithms by: Darkside</p>
+
+
+            </div><!-- Close General notes -->
+        </div> <!-- Close Column-->
+
+
+
+        <div class="col-md-5 col-md-offset-1">
+          <div>
+            <h3><strong>Starcraft Broodwar: Color List</strong></h3>
+          </div>
+
+          <table style>
+            <h4>--- NON-COLORS (USE ANYWHERE) ---</h4>
+        <tr>
+          <th>Values</th>
+          <th>Description</th>
+        </tr>
+        <tr>
+          <td><00></td>
+            <td>Null, automatically changes to <01></td>
+        </tr>
+        <tr>
+          <td><20></td>
+          <td>Space</td>
+        </tr>
+        <tr>
+          <td><09></td>
+          <td>Tab</td>
+        </tr>
+        <tr>
+          <td><12></td>
+          <td>Right Align / Overlap Back</td>
+        </tr>
+        <tr>
+          <td><13></td>
+          <td>Center Align / Overlap Front</td>
+        </tr>
+        <tr>
+          <td><14></td>
+          <td>Invisible (Overrides subsequent colors until new line)</td>
+        </tr>
+        <tr>
+          <td><0A></td>
+          <td>New Line</td>
+        </tr>
+        <tr>
+          <td><0B></td>
+          <td>Invisible (Overrides subsequent colors until new line)</td>
+        </tr>
+        <tr>
+          <td><0C></td>
+          <td>Nothing?/New Line?</td>
+        </tr>
+        <tr>
+          <td><1A></td>
+          <td>Nothing?/Periwinkle (Default color)</td>
+        </tr>
+        <tr>
+          <td><7F></td>
+          <td>Filled square (in-game mission objectives), empty thin rectangle (mission briefing), lowered O (unit names). Can be colored.
+</td>
+        </tr>
+      </table>
+
+
+  <table>
+  <h4>--- IN GAME ---</h4>
+
+  <tr>
+    <th>Values</th>
+    <th>Description</th>
+  </tr>
+  <tr>
+    <td><01></td>
+    <td>Mimicks the second-last used color</td>
+  </tr>
+  <tr>
+    <td><02></td>
+    <td>Periwinkle (Default color)</td>
+  </tr>
+  <tr>
+    <td><03></td>
+    <td>Yellow (Detector)</td>
+  </tr>
+  <tr>
+    <td><04></td>
+    <td>White (Advisor)</td>
+  </tr>
+  <tr>
+    <td><05></td>
+    <td>Grey (Overrides subsequent colors until new line)</td>
+  </tr>
+  <tr>
+    <td><06></td>
+    <td>Red (Disabled)</td>
+  </tr>
+  <tr>
+    <td><07></td>
+    <td>Green (Blind/Parasite)</td>
+  </tr>
+  <tr>
+    <td><08></td>
+    <td>Red (Player 1)</td>
+  </tr>
+  <tr>
+    <td><0E></td>
+    <td>Blue (Player 2)</td>
+  </tr>
+  <tr>
+    <td><0F></td>
+    <td>Teal (Player 3)</td>
+  </tr>
+  <tr>
+    <td><10></td>
+    <td>Purple (Player 4)</td>
+  </tr>
+  <tr>
+    <td><11></td>
+    <td>Orange (Player 5)</td>
+  </tr>
+  <tr>
+    <td><15></td>
+    <td>Brown (Player 6)</td>
+  </tr>
+  <tr>
+    <td><16></td>
+    <td>White (Player 7)</td>
+  </tr>
+  <tr>
+    <td><17></td>
+    <td>Yellow (Player 8)</td>
+  </tr>
+  <tr>
+    <td><18></td>
+    <td>Green (Player 9)</td>
+  </tr>
+  <tr>
+    <td><19></td>
+    <td>Lemon (Player 10)</td>
+  </tr>
+  <tr>
+    <td><1B></td>
+    <td>Peach (Player 11)</td>
+  </tr>
+  <tr>
+    <td><1C></td>
+    <td>Royal Blue (Player 12)</td>
+  </tr>
+  <tr>
+    <td><1D></td>
+    <td>Asparagus (Player 13)</td>
+  </tr>
+  <tr>
+    <td><1E></td>
+    <td>Blue-Grey (Player 14)</td>
+  </tr>
+  <tr>
+    <td><1F></td>
+    <td>Cyan (Player 15)</td>
+  </tr>
+  </table>
+
+  <table>
+    <h4>--- BRIEFING ROOM ---</h4s>
+    <tr>
+      <th>Values</th>
+      <th>Description</th>
+    </tr>
+    <tr>
+      <td><01></td>
+      <td>Mimicks the second-last used color</td>
+    </tr>
+    <tr>
+      <td><02></td>
+      <td>Periwinkle (Default color)</td>
+    </tr>
+    <tr>
+      <td><03></td>
+      <td>Dark Green</td>
+    </tr>
+    <tr>
+      <td><04></td>
+      <td>Light Green</td>
+    </tr>
+    <tr>
+      <td><05></td>
+      <td>Grey (Overrides all subsequent colors on the string.)</td>
+    </tr>
+    <tr>
+      <td><06></td>
+      <td>White</td>
+    </tr>
+    <tr>
+      <td><07></td>
+      <td>Red</td>
+    </tr>
+  </table>
+
+  <p>(Using other colors yields unpredictable results.)</p>
+  <p>Last verified in version 1.18.7 (credit to Darkside)</p>
+
+
+    </div> <!-- Close Col-->
+  </div> <!-- Close Row-->
+</div> <!-- Close Row -->
+
+
+
+<!--Copyright information in the footer-->
+<footer>
+    <p><small> Copyright &copy; Orie Hulan 2017 </small>
+    </p>
+</footer>
+
+
+  <!-- Add Stylesheet -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="scripts/jquery-3.2.1.min.js"></script>
+  <script src="scripts/clipboard.min.js"></script>
+  <script src="scripts/app.js"></script>
+
+</body>
+</html>

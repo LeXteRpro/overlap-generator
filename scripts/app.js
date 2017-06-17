@@ -4,7 +4,7 @@
 /* Declaring Global Variables */
 
 var total = 0;
-var n = 0
+var n = 0;
 
 /* ===== Clipboard ===== */
 /* instantiate Clipbaord vairable */
@@ -21,8 +21,8 @@ clipboard.on('error', function(e) {
 
 $( "#overlapInput" ).keyup(function() {
 
+/* Key presses is equal to what's in the input form */
    textOverlap = document.getElementById("overlapInput").value;
-   n = 0;
 
   overLapToPixels();
   document.getElementById('pixelNum').innerHTML = total;
@@ -36,13 +36,24 @@ function x2textOverlapFunction() {
   /* Call Remove all Button CSS function */
   removeButtonCSS();
 
+  /* Black Text */
+  document.getElementById("overlapResults").style.color = "black";
+
   /* Add CSS to the selected Button */
   $( "#x2textOverlapButton" ).removeClass( "overlapButtons" ).addClass( "selectedOverlapButton" );
 
     var textOverlap;
      textOverlap = document.getElementById("overlapInput").value;
-      document.getElementById('overlapResults').innerHTML = '<04>' + textOverlap + '<13><04>' + textOverlap + '<0B>.                                                                                                                           ';
 
+      if (total > 308) {
+        document.getElementById('overlapResults').innerHTML = "This exceeds the max length for x2 text laps. Sorry!";
+        document.getElementById("overlapResults").style.color = "red";
+      }
+
+      else {
+        document.getElementById('overlapResults').innerHTML = '<04>' + textOverlap + '<13><04>' + textOverlap + '<0B>.                                                                                                                           ';
+        document.getElementById("overlapResults").style.color = "black";
+        }
     }
 
 
@@ -51,6 +62,8 @@ function x2unitOverlapFunction() {
 
   /* Call Remove all Button CSS function */
   removeButtonCSS();
+  /* Black Text */
+  document.getElementById("overlapResults").style.color = "black";
 
   /* Add CSS to the selected Button */
   $( "#x2unitOverlapButton" ).removeClass( "overlapButtons" ).addClass( "selectedOverlapButton" );
@@ -63,7 +76,7 @@ function x2unitOverlapFunction() {
     console.log(total);
 
     /* Formula for After Name */
-    afterName = parseFloat(30 / (75 / total));
+    afterName = parseFloat(30 / (148 / total) *2 ) ;
     afterName = Math.round(afterName);
 
     /* Formula for Before Name */
@@ -86,36 +99,62 @@ function x2unitOverlapFunction() {
     }
 
 
-    document.getElementById('overlapResults').innerHTML = beforeNameSpace + '<04>' + textOverlap + '<12><04>' + textOverlap + afterNameSpace;
+if (total > 75) {
+  document.getElementById('overlapResults').innerHTML = "This exceeds the max length for x2 Unit laps. Sorry!";
+  document.getElementById("overlapResults").style.color = "red";
+}
+
+else {
+  document.getElementById('overlapResults').innerHTML = beforeNameSpace + '<04>' + textOverlap + '<12><04>' + textOverlap + afterNameSpace;
+  document.getElementById("overlapResults").style.color = "black";
   }
+}
 
 
 function x2missionBriefingOverlapFunction() {
   /* Call Remove all Button CSS function */
   removeButtonCSS();
+  /* Black Text */
+  document.getElementById("overlapResults").style.color = "black";
   /* Add CSS to the selected Button */
   $( "#x2briefingOverlapButton" ).removeClass( "overlapButtons" ).addClass( "selectedOverlapButton" );
-}
 
+  var textOverlap;
+   textOverlap = document.getElementById("overlapInput").value;
+
+    document.getElementById('overlapResults').innerHTML = '<04>' + textOverlap + '<13><04>' + textOverlap + '<14>.                                    ';
+
+}
 function x3textOverlapFunction() {
   /* Call Remove all Button CSS function */
   removeButtonCSS();
+  /* Black Text */
+  document.getElementById("overlapResults").style.color = "black";
   /* Add CSS to the selected Button */
   $( "#x3textOverlapButton" ).removeClass( "overlapButtons" ).addClass( "selectedOverlapButton" );
+
+  document.getElementById('overlapResults').innerHTML = ""
+
 }
 
 function x3unitOverlapFunction() {
     /* Call Remove all Button CSS function */
     removeButtonCSS();
+    /* Black Text */
+    document.getElementById("overlapResults").style.color = "black";
     /* Add CSS to the selected Button */
     $( "#x3unitOverlapButton" ).removeClass( "overlapButtons" ).addClass( "selectedOverlapButton" );
+      document.getElementById('overlapResults').innerHTML = ""
   }
 
 function x3missionBriefingOverlapFunction() {
   /* Call Remove all Button CSS function */
   removeButtonCSS();
+  /* Black Text */
+  document.getElementById("overlapResults").style.color = "black";
   /* Add CSS to the selected Button */
   $( "#x3briefingOverlapButton" ).removeClass( "overlapButtons" ).addClass( "selectedOverlapButton" );
+    document.getElementById('overlapResults').innerHTML = ""
 }
 
 
@@ -213,6 +252,7 @@ var removeButtonCSS = function() {
       else if(textOverlap.charAt(i)=="?"){total = total + (n+6);}
       else if(textOverlap.charAt(i)=="&"){total = total + (n+8);}
       else if(textOverlap.charAt(i)=="*"){total = total + (n+6);}
+      else if(textOverlap.charAt(i)==")"){total = total + (n+3);}
       else if(textOverlap.charAt(i)=="("){total = total + (n+3);}
       else if(textOverlap.charAt(i)=="&"){total = total + (n+8);}
       else if(textOverlap.charAt(i)=="&"){total = total + (n+8);}
@@ -248,7 +288,11 @@ var removeButtonCSS = function() {
       else if(textOverlap.charAt(i)=="¸"){total = total + (n+3);}
       else if(textOverlap.charAt(i)=="¯"){total = total + (n+5);}
       else if(textOverlap.charAt(i)==" "){total = total + (n+5);}
-
+      else if(textOverlap.charAt(i)=="#"){total = total + (n+6);}
+      else if(textOverlap.charAt(i)=="\\"){total = total + (n+5);}
+      else if(textOverlap.charAt(i)=="§"){total = total + (n+6);}
+      else if(textOverlap.charAt(i)=="¶"){total = total + (n+6);}
+      else if(textOverlap.charAt(i)=="µ"){total = total + (n+6);}
 
     }; /* Close for loop */
     return total;

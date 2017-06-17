@@ -1,6 +1,20 @@
 
 body {
-  margin-top: 70px;
+  background: #323232;
+  background-position: contain;
+  margin-top: 40px;
+  margin-bottom: 50px;
+  color: black;
+  font-size: 1.8em;
+}
+
+.bg {
+  background-image: url("../images/sc-bg.jpg");
+  background-position: cover;
+}
+
+.bg2 {
+  background-color: grey;
 }
 
 
@@ -20,44 +34,113 @@ button {
   background-color: #transparent;
 }
 
+li {
+  font-size: 1.0em;
+  line-height: 36px;
+  list-style-type: square;
+
+}
+
+
 .button-wrapper {
   margin: 10px auto;
 
 }
 
+.span {
+  color: red;
+}
+
+.pixNum-wrapper h5 {
+  width: 120px;
+  padding: 0;
+  margin: 0;
+  display: inline-block;
+}
+
+.pixNum-wrapper p {
+  width: 25px;
+  margin: 0;
+  padding: 0;
+  display: inline-block;
+  height: 15px;
+}
+
+th {
+  padding-right: 50px;
+  font-weight: 700;
+  padding-bottom: 10px;
+}
+
+td {
+  padding-bottom: 5px;
+  font-size: 1.1em;
+}
+
+h1 {
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+h3 {
+  font-weight: 500;
+}
+
+h4 {
+  font-weight: 600;
+  font-size: 1.1em;
+  margin-top: 30px;
+  margin-bottom: 15px;
+}
+
+
+.generator-wrapper {
+  border: 2px solid gray;
+  display: inline-block;
+  border-radius: 10px;
+  padding: 40px 100px;
+  background: rgba(255,255,255, 0.5);
+  margin-top: 70px;
+
+}
+
+.content-wrapper {
+    background: rgba(255,255,255, 0.6);
+    border-radius: 10px;
+    margin-top: 70px;
+}
+
+.contact-wrapper {
+  display: inline-block;
+}
+
+
+
 /* ===== DEFAULT BUTTON STYLING ===== */
 .overlapButtons {
-  -moz-box-shadow:inset 0px 1px 0px 0px #ffffff;
-  -webkit-box-shadow:inset 0px 1px 0px 0px #ffffff;
-  box-shadow:inset 0px 1px 0px 0px #ffffff;
-  background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #f9f9f9), color-stop(1, #e9e9e9));
   background:-moz-linear-gradient(top, #f9f9f9 5%, #e9e9e9 100%);
   background:-webkit-linear-gradient(top, #f9f9f9 5%, #e9e9e9 100%);
   background:-o-linear-gradient(top, #f9f9f9 5%, #e9e9e9 100%);
   background:-ms-linear-gradient(top, #f9f9f9 5%, #e9e9e9 100%);
   background:linear-gradient(to bottom, #f9f9f9 5%, #e9e9e9 100%);
-  filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#f9f9f9', endColorstr='#e9e9e9',GradientType=0);
-  background-color:#f9f9f9;
   border-radius:2px;
   border:1px solid lightgrey;
   display:inline-block;
   cursor:pointer;
-  color:#666666;
+  color:black;
   font-family:Arial;
-  font-size:19px;
+  font-size:18px;
   padding:10px 15px;
   text-decoration:none;
   text-shadow:0px 1px 0px #283966;
 }
 
 .overlapButtons:hover {
-  background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #e9e9e9), color-stop(1, #f9f9f9));
   background:-moz-linear-gradient(top, #e9e9e9 5%, #f9f9f9 100%);
   background:-webkit-linear-gradient(top, #e9e9e9 5%, #f9f9f9 100%);
   background:-o-linear-gradient(top, #e9e9e9 5%, #f9f9f9 100%);
   background:-ms-linear-gradient(top, #e9e9e9 5%, #f9f9f9 100%);
   background:linear-gradient(to bottom, #e9e9e9 5%, #f9f9f9 100%);
-  filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#e9e9e9', endColorstr='#f9f9f9',GradientType=0);
   background-color:#e9e9e9;
 }
 
@@ -107,7 +190,26 @@ button {
   position:relative;
   top:1px;
 }
-
-
-
   /* ===== CHOSEN BUTTON STYLING END ===== */
+
+
+  /* Footer styles*/
+  footer {
+    display: block;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    font-weight: 600;
+    /* Add transparency to the footer*/
+    background-color: #101010;
+    color: #F0FFFF
+    /* Styles for the p elements in the footer*/ }
+    footer p {
+      float: right;
+      display: inline-block;
+      margin: 0;
+      padding: 0;
+      padding-right: 1rem;
+      padding-top: 0.5rem;
+      padding-bottom: 0.5rem; }
